@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>数据可视化demo</title>
+		<link href="../styles/common.css" rel="stylesheet">
+		<link href="../styles/bootstrap.min.css" rel="stylesheet">
+		<link href="../styles/bootstrap-table.css" rel="stylesheet">
+		<link href="../styles/pagination.css" rel="stylesheet">
+		<script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+		<script src="../scripts/Plugin/echarts.min.js"></script>
+		<script src="../scripts/Plugin/jquery.pagination.min.js"></script>
+		<script src="../scripts/common.js"></script>
+		<script src="../scripts/chronic.js"></script>
+		<style>
+			#b{
+				background-color:skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<header class="header left">
+			<div class="left nav">
+				<ul>
+					<li><i class="nav_1"></i><a href="index.html">采集概况</a> </li>
+					<!-- <li><i class="nav_2"></i><a href="quota.html">指标分析</a> </li> -->
+					<li><i class="nav_3"></i><a href="trend.html">趋势分析</a> </li>
+					<!-- <li class="nav_active"><i class="nav_4"></i><a href="chronic.html">慢病病人列表</a> </li> -->
+				</ul>
+			</div>
+			<div class="header_center left" style="position:relative">
+				<h2><strong>监测企业列表</strong></h2>
+
+			</div>
+			<div class="right nav text_right">
+				<ul>
+
+				</ul>
+			</div>
+
+		</header>
+		<!--内容部分-->
+		<div class="con left" style="width: 98%;margin-left: 1%;margin-bottom: 25px;">
+			<input type="text" id="b" placeholder="请输入企业编号"
+				style="width: 180px;height: 28px;border-radius: 3px;text-indent: 1em;border: 1px solid#4b8df8;color: #fff;" /><button
+				onclick="click()" id="a" class="btn btn-primary btn-sm" style="margin-left:20px"><span
+					class="glyphicon glyphicon-search"></span>查询</button>
+
+			<div class="div_any_child">
+				<div class="table_p" style="height: 96%;margin-top: 20px;">
+					<table>
+						<thead>
+							<tr>
+								<th>企业编号</th>
+								<th>企业名称</th>
+								<th>企业类型</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>企业01</td>
+								<td>化工企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>企业02</td>
+								<td>造纸企业</td>
+								<td></i><a href="trend1.html"><button class="btn btn-primary btn-sm">查看</button></a>
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>企业03</td>
+								<td>水泥企业</td>
+								<td></i><a href="trend2.html"><button class="btn btn-primary btn-sm">查看</button></a>
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>企业04</td>
+								<td>煤电企业</td>
+								<td></i><a href="trend3.html"><button class="btn btn-primary btn-sm">查看</button></a>
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>企业05</td>
+								<td>水泥企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>企业06</td>
+								<td>造纸企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>企业07</td>
+								<td>化工企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>企业08</td>
+								<td>化工企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>企业09</td>
+								<td>煤电企业</td>
+								<td></i><a href="trend.html"><button class="btn btn-primary btn-sm">查看</button></a></li>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="box">
+					<div id="pagination" class="page fl"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			function $(id) {
+				return document.getElementById(id);
+			} //封装的$(id)函数
+			$("a").onclick = function() { //按钮点击时，执行函数（事件源 . 事件 = 事件处理程序）
+				if ($("b").value == "1") { //判断输入信息
+					 window.location.href="chronic1.html";
+				} 
+				else if ($("b").value == "2") { //判断输入信息
+					 window.location.href="chronic2.html";
+				} 
+				else if ($("b").value == "3") { //判断输入信息
+					 window.location.href="chronic3.html";
+				} 
+				else if ($("b").value == "4") { //判断输入信息
+					 window.location.href="chronic4.html";
+				} 
+				else if ($("b").value == "5") { //判断输入信息
+					 window.location.href="chronic5.html";
+				} 
+				else if ($("b").value == "6") { //判断输入信息
+					 window.location.href="chronic6.html";
+				} 
+				else if ($("b").value == "7") { //判断输入信息
+					 window.location.href="chronic7.html";
+				} 
+				else if ($("b").value == "8") { //判断输入信息
+					 window.location.href="chronic8.html";
+				} 
+				else if ($("b").value == "9") { //判断输入信息
+					 window.location.href="chronic9.html";
+				} 
+				else{
+					alert("抱歉，您查询的企业编号不存在！");
+				}
+			}
+		</script>
+	</body>
+</html>
